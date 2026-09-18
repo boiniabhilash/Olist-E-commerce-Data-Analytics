@@ -115,7 +115,8 @@ The final stage of the current project was developed in Power BI to create an in
 
 ### Dashboard Preview
 
-PowerBI/Olist Dashboard.png
+Olist-E-commerce-Data-Analytics/PowerBI
+/Olist Dashboard.png
 
 The complete Power BI dashboard file is available in:
 
