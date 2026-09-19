@@ -480,3 +480,135 @@ FROM orders
 WHERE order_status = 'delivered'
 GROUP BY delivery_performance
 ORDER BY total_orders DESC;
+
+
+-- ============================================================
+-- DATABASE DESIGN: PRIMARY KEYS AND FOREIGN KEYS
+-- ============================================================
+
+-- Primary Keys
+-- customers: customer_id
+-- orders: order_id
+-- order_items: (order_id, order_item_id)
+-- order_payments: (order_id, payment_sequential)
+-- reviews: review_id
+
+
+-- Foreign Keys
+-- orders.customer_id → customers.customer_id
+-- order_items.order_id → orders.order_id
+-- order_payments.order_id → orders.order_id
+-- reviews.order_id → orders.order_id
+
+
+-- ============================================================
+-- RELATIONSHIP VALIDATION ANALYSIS
+-- ============================================================
+
+
+-- Customer → Orders
+-- Shows orders associated with each customer
+
+SELECT
+    c.customer_id,
+    c.customer_city,
+    c.customer_state,
+    COUNT(o.order_id) AS total_orders
+FROM customers c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY
+    c.customer_id,
+    c.customer_city,
+    c.customer_state
+ORDER BY total_orders DESC
+LIMIT 10;
+
+
+-- Orders → Order Items
+-- Shows the number of items contained in each order
+
+SELECT
+    o.order_id,
+    o.order_status,
+    COUNT(oi.order_item_id) AS total_items
+FROM orders o
+JOIN order_items oi
+    ON o.order_id = oi.order_id
+GROUP BY
+    o.order_id,
+    o.order_status
+ORDER BY total_items DESC
+LIMIT 10;
+
+
+-- Orders → Payments
+-- Shows payment value by order status
+
+SELECT
+    o.order_status,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    ROUND(SUM(p.payment_value), 2) AS total_payment_value,
+    ROUND(AVG(p.payment_value), 2) AS average_payment
+FROM orders o
+JOIN order_payments p
+    ON o.order_id = p.order_id
+GROUP BY o.order_status
+ORDER BY total_payment_value DESC;
+
+
+-- Orders → Reviews
+-- Shows review scores by order status
+-- Note: Only 279 review records were loaded into the SQL reviews table.
+
+SELECT
+    o.order_status,
+    COUNT(r.review_id) AS total_reviews,
+    ROUND(AVG(r.review_score), 2) AS average_review_score
+FROM orders o
+JOIN reviews r
+    ON o.order_id = r.order_id
+GROUP BY o.order_status
+ORDER BY average_review_score DESC;
+
+
+-- Primary Key Validation
+-- Confirms that primary keys uniquely identify records
+
+SELECT
+    'customers' AS table_name,
+    COUNT(*) AS total_rows,
+    COUNT(DISTINCT customer_id) AS unique_primary_keys
+FROM customers
+
+UNION ALL
+
+SELECT
+    'orders',
+    COUNT(*),
+    COUNT(DISTINCT order_id)
+FROM orders
+
+UNION ALL
+
+SELECT
+    'order_items',
+    COUNT(*),
+    COUNT(DISTINCT CONCAT(order_id, '-', order_item_id))
+FROM order_items
+
+UNION ALL
+
+SELECT
+    'order_payments',
+    COUNT(*),
+    COUNT(DISTINCT CONCAT(order_id, '-', payment_sequential))
+FROM order_payments
+
+UNION ALL
+
+SELECT
+    'reviews',
+    COUNT(*),
+    COUNT(DISTINCT review_id)
+FROM reviews;
