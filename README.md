@@ -15,7 +15,7 @@ The same business dataset is analyzed across different tools, with each stage fo
 | 1     | Excel       | Data cleaning, PivotTables, business analysis and dashboard | ✅ Completed |
 | 2     | SQL / MySQL | Business analysis, advanced SQL and data quality analysis   | ✅ Completed |
 | 3     | Power BI    | Data modeling, DAX and interactive dashboard                | ✅ Completed |
-| 4     | Python      | Exploratory data analysis and visualization                 | 🔜 Planned  |
+| 4     | Python      | Exploratory data analysis and visualization                 | ✅ Completed |
 
 ---
 
@@ -31,6 +31,7 @@ The analysis focuses on:
 * Payments
 * Sales performance
 * Delivery performance
+* Customer reviews
 * Data quality
 
 ---
@@ -41,6 +42,9 @@ The analysis focuses on:
 * MySQL / SQL
 * Power BI
 * Python
+* Pandas
+* Matplotlib
+* Jupyter Notebook
 
 ---
 
@@ -98,7 +102,7 @@ SQL queries are available in:
 
 # Power BI Analysis
 
-The final stage of the current project was developed in Power BI to create an interactive business dashboard.
+The Power BI stage was developed to create an interactive business dashboard.
 
 ### Power BI skills demonstrated
 
@@ -120,6 +124,46 @@ The final stage of the current project was developed in Power BI to create an in
 The complete Power BI dashboard file is available in:
 
 `PowerBI/Olist Ecommerce Dashboard.pbix`
+
+---
+
+# Python Analysis
+
+Python was used as the final analytical stage of the project for exploratory data analysis and visualization.
+
+### Python skills demonstrated
+
+* Python data analysis
+* Pandas
+* Data loading
+* Data inspection
+* Data cleaning
+* Data aggregation
+* Grouping and filtering
+* Time-series analysis
+* Business KPI calculations
+* Matplotlib visualization
+* Exploratory data analysis
+
+### Python Analysis Areas
+
+* Order performance
+* Order status analysis
+* Monthly order trends
+* Delivery performance
+* Late delivery analysis
+* Sales performance
+* Freight cost analysis
+* Average Order Value
+* Seller performance
+* Product performance
+* Payment analysis
+* Customer analysis
+* Review analysis
+
+The complete Python notebook is available in:
+
+`Python/Olist_Ecommerce_Data_Analysis_Python.ipynb`
 
 ---
 
@@ -163,7 +207,7 @@ Approximately **98.97%** of these orders were classified as unavailable or cance
 
 Seller-level analysis was performed to examine sales contribution, order volume, freight costs and average order-item value.
 
-The analysis also compared the contribution of the top sellers with overall product sales to understand seller concentration.
+The analysis also compared the contribution of top sellers with overall product sales to understand seller concentration.
 
 ---
 
@@ -200,8 +244,10 @@ olist-ecommerce-data-analytics/
 │
 ├── Excel/
 │   └── Excel project documentation
+│   └── README.me
 │
 ├── SQL/
+│   └── olist_analysis_title.sql
 │   └── olist_sql_analysis.sql
 │
 ├── PowerBI/
@@ -209,7 +255,8 @@ olist-ecommerce-data-analytics/
 │   └── Olist_Dashboard.png
 │
 └── Python/
-    └── Coming soon
+    ├── Olist_Ecommerce_Data_Analysis_Python.ipynb
+    └── README.md
 ```
 
 ---
@@ -223,19 +270,20 @@ olist-ecommerce-data-analytics/
 * [x] Power BI Data Modeling
 * [x] Power BI Dashboard
 * [x] Dashboard Formatting
+* [x] Python Exploratory Data Analysis
+* [x] Python Visualization
 * [x] Data Quality Documentation
-
-### Upcoming
-
-* [ ] Python Exploratory Data Analysis
-* [ ] Python Visualization
-* [ ] Final Cross-Tool Business Insights
-* [ ] Final Portfolio Review
+* [x] Cross-Tool Business Analysis
+* [x] GitHub Portfolio Organization
 
 ---
 
-## Future Development
+# Final Outcome
 
-The next stage of the project will use **Python** for exploratory data analysis and visualization.
+This project demonstrates an end-to-end data analytics workflow using the same e-commerce dataset across multiple tools.
 
-The completed Excel, SQL and Power BI work will remain unchanged while Python is developed as the next analytical stage.
+The project covers:
+
+**Excel → SQL → Power BI → Python**
+
+Each tool was used for different analytical purposes, allowing the project to demonstrate practical skills in data cleaning, SQL analysis, business intelligence, exploratory data analysis, visualization, KPI development and business insight generation.
