@@ -1,12 +1,12 @@
-# Olist E-Commerce Business Intelligence & Customer Analytics
+# Olist ECommerce Business Intelligence & Customer Analytics
 
 ## Project Overview
 
-An end-to-end data analytics project built using the Olist Brazilian E-Commerce dataset.
+An end to end data analytics project built using the Olist Brazilian Ecommerce dataset.
 
-The project analyzes e-commerce sales, customers, products, payments, delivery performance, and customer satisfaction across multiple analytical tools.
+The project analyzes ecommerce sales, customers, products, payments, delivery performance and customer satisfaction across multiple analytical tools.
 
-The workflow progresses from data preparation and business analysis to SQL analytics, advanced Python analysis, interactive Power BI dashboards, and an AI/GenAI Business Analyst prototype.
+The workflow progresses from data preparation and business analysis to SQL analytics, advanced Python analysis, interactive Power BI dashboards and an AI/GenAI Business Analyst prototype.
 
 ### Project Workflow
 
@@ -31,7 +31,7 @@ The objective of this project is to understand:
 
 # Dataset
 
-The project uses the **Olist Brazilian E-Commerce dataset**, containing information about:
+The project uses the **Olist Brazilian Ecommerce dataset**, containing information about:
 
 * Orders
 * Customers
@@ -43,7 +43,7 @@ The project uses the **Olist Brazilian E-Commerce dataset**, containing informat
 * Product categories
 * Delivery dates
 
-The dataset contains approximately 100,000 orders and more than 100,000 order-item and payment records.
+The dataset contains approximately 100,000 orders and more than 100,000 order item and payment records.
 
 ---
 
@@ -55,7 +55,7 @@ The dataset contains approximately 100,000 orders and more than 100,000 order-it
 | MySQL      | Relational database analysis and advanced SQL             |
 | Python     | EDA, statistics, RFM, segmentation, predictive analytics  |
 | Power BI   | Interactive business intelligence dashboard               |
-| AI / GenAI | AI-ready Business Analyst prototype                       |
+| AI / GenAI | AI ready Business Analyst prototype                       |
 | GitHub     | Project documentation and portfolio presentation          |
 
 ---
@@ -183,7 +183,7 @@ Python was used to move beyond descriptive analysis into advanced customer and s
 
 Order values were analyzed to understand their distribution.
 
-The analysis showed a strongly right-skewed distribution, with a relatively small number of high-value orders.
+The analysis showed a strongly right-skewed distribution, with a relatively small number of high value orders.
 
 Using the IQR method:
 
@@ -193,7 +193,7 @@ Using the IQR method:
 * Outliers: 7,913
 * Outlier percentage: approximately 8.02%
 
-High-value orders were retained because they may represent genuine business transactions.
+High value orders were retained because they may represent genuine business transactions.
 
 ---
 
@@ -206,13 +206,13 @@ Customers were segmented based on purchase value:
 * High
 * Very High
 
-The analysis showed that most customers belonged to lower-value groups, while a smaller group generated substantially higher purchase values.
+The analysis showed that most customers belonged to lower value groups, while a smaller group generated substantially higher purchase values.
 
 An important dataset characteristic was identified:
 
 > Each customer has one order in the available Olist customer/order structure.
 
-Therefore, repeat-customer analysis is limited.
+Therefore, repeat customer analysis is limited.
 
 ---
 
@@ -232,7 +232,7 @@ RFM segmentation was also incorporated into the Power BI dashboard.
 
 # Correlation & Statistical Analysis
 
-Order-level correlation analysis examined relationships between:
+Order level correlation analysis examined relationships between:
 
 * Product price
 * Freight value
@@ -280,14 +280,14 @@ Low review:
 
 ### Balanced model
 
-A class-balanced Logistic Regression model was also tested.
+A class balanced Logistic Regression model was also tested.
 
 * Accuracy: 72.64%
 * Precision: 24.33%
 * Recall: 53.77%
 * F1 Score: 33.50%
 
-The balanced model improved recall for low-review cases while reducing overall accuracy and precision.
+The balanced model improved recall for low review cases while reducing overall accuracy and precision.
 
 This demonstrates the importance of considering multiple evaluation metrics when dealing with imbalanced classification problems.
 
@@ -377,8 +377,8 @@ The prototype combines evidence such as:
 * Average delivery time
 * Late orders
 * Delivery/review correlation
-* Low-review orders
-* Predictive-model performance
+* Low review orders
+* Predictive model performance
 
 The workflow structures responses into:
 
@@ -392,7 +392,7 @@ The workflow structures responses into:
 
 The notebook is an **AI-ready Business Analyst prototype**.
 
-It currently uses structured project evidence and rule-based responses.
+It currently uses structured project evidence and rule based responses.
 
 An external LLM/API has **not** been connected.
 
@@ -416,30 +416,30 @@ Most customers have relatively low purchase values, while a smaller group contri
 
 ### 3. Delivery performance varies
 
-A meaningful number of orders were delivered late, making delivery performance an important customer-experience metric.
+A meaningful number of orders were delivered late, making delivery performance an important customer experience metric.
 
-### 4. Repeat-customer analysis is limited
+### 4. Repeat customer analysis is limited
 
-The available Olist customer/order structure contains one order per customer, so traditional repeat-purchase analysis cannot be meaningfully performed.
+The available Olist customer/order structure contains one order per customer, so traditional repeat purchase analysis cannot be meaningfully performed.
 
-### 5. Low-review prediction is challenging
+### 5. Low review prediction is challenging
 
-The balanced model detected more low-review cases than the baseline model, but precision remained limited.
+The balanced model detected more low review cases than the baseline model, but precision remained limited.
 
-This demonstrates the trade-off between recall and precision in imbalanced classification.
+This demonstrates the trade off between recall and precision in imbalanced classification.
 
 ### 6. AI can support analytical workflows
 
-Structured business evidence can be combined with natural-language questions to create an AI-assisted Business Analyst workflow.
+Structured business evidence can be combined with natural language questions to create an AI assisted Business Analyst workflow.
 
 ---
 
 # Project Limitations
 
 * Customer frequency is effectively 1 in the available dataset structure.
-* Repeat-customer analysis is therefore limited.
+* Repeat customer analysis is therefore limited.
 * Correlation does not prove causation.
-* The predictive model is a baseline and is not production-ready.
+* The predictive model is a baseline and is not production ready.
 * The predictive model uses a limited feature set.
 * The SQL review table contained fewer review records than the Python review dataset.
 * RFM scoring methods differ slightly between Python and Power BI because Power BI uses fixed business thresholds.
@@ -477,7 +477,7 @@ Structured business evidence can be combined with natural-language questions to 
 * NumPy
 * Matplotlib
 * SciPy
-* Scikit-learn
+* Scikit learn
 * Statistical analysis
 * RFM analysis
 * Customer segmentation
@@ -508,16 +508,16 @@ Structured business evidence can be combined with natural-language questions to 
 
 # Final Project Outcome
 
-This project demonstrates an end-to-end Data Analyst workflow:
+This project demonstrates an end to end Data Analyst workflow:
 
 **Raw Data → Excel → SQL → Python → Power BI → AI/GenAI**
 
 The project combines technical analysis with business interpretation to understand:
 
-**Sales → Products → Customers → Delivery → Customer Satisfaction → Predictive Analytics → AI-assisted Business Analysis**
+**Sales → Products → Customers → Delivery → Customer Satisfaction → Predictive Analytics → AI assisted Business Analysis**
 
 ---
 
 ## Repository
 
-All project files, analysis notebooks, SQL scripts, Excel analysis, Power BI dashboard, and documentation are organized within this repository.
+All project files, analysis notebooks, SQL scripts, Excel analysis, Power BI dashboard and documentation are organized within this repository.
