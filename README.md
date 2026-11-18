@@ -183,7 +183,7 @@ Python was used to move beyond descriptive analysis into advanced customer and s
 
 Order values were analyzed to understand their distribution.
 
-The analysis showed a strongly right-skewed distribution, with a relatively small number of high value orders.
+The analysis showed a strongly right skewed distribution, with a relatively small number of high value orders.
 
 Using the IQR method:
 
