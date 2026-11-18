@@ -1,10 +1,10 @@
-# Olist E-Commerce Analytics — Excel
+# Olist Ecommerce Analytics — Excel
 
 ## Overview
 
-The first stage of the Olist E-Commerce Analytics project was completed using Microsoft Excel.
+The first stage of the Olist Ecommerce Analytics project was completed using Microsoft Excel.
 
-The objective was to explore the e-commerce dataset, perform data preparation, analyze business performance and create meaningful business insights using Excel.
+The objective was to explore the ecommerce dataset, perform data preparation, analyze business performance and create meaningful business insights using Excel.
 
 ## Analysis Performed
 
@@ -15,7 +15,7 @@ The Excel analysis covered:
 * Customer state analysis
 * Seller delivery performance
 * Order and sales analysis
-* PivotTable-based analysis
+* PivotTable based analysis
 * KPI calculations
 * Business trend analysis
 * Data visualization
@@ -44,7 +44,7 @@ The analysis focused on:
 
 ## Workbook
 
-The completed Excel workbook is maintained locally because the working file is approximately 140 MB and exceeds GitHub's standard file-size limit for individual files.
+The completed Excel workbook is maintained locally because the working file is approximately 140 MB and exceeds GitHub's standard file size limit for individual files.
 
 The Excel analysis is part of the same Olist project documented in the main repository README.
 
