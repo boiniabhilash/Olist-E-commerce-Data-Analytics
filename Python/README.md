@@ -1,16 +1,16 @@
-# Olist E-Commerce Data Analysis — Python
+# Olist Ecommerce Data Analysis — Python
 
 ## Project Overview
 
-This project analyzes the Olist Brazilian e-commerce dataset using Python to understand sales performance, customer behavior, delivery performance, and customer satisfaction.
+This project analyzes the Olist Brazilian ecommerce dataset using Python to understand sales performance, customer behavior, delivery performance and customer satisfaction.
 
-The analysis progresses from basic exploratory data analysis to advanced customer analytics, statistical analysis, predictive modeling, and an AI/GenAI Business Analyst prototype.
+The analysis progresses from basic exploratory data analysis to advanced customer analytics, statistical analysis, predictive modeling and an AI/GenAI Business Analyst prototype.
 
 ---
 
 ## Objectives
 
-* Understand overall e-commerce sales and order patterns
+* Understand overall ecommerce sales and order patterns
 * Analyze customer purchasing behavior
 * Identify delivery performance issues
 * Analyze customer review scores
@@ -20,13 +20,13 @@ The analysis progresses from basic exploratory data analysis to advanced custome
 * Identify relationships between delivery and customer satisfaction
 * Perform statistical analysis
 * Build a baseline predictive model for low review scores
-* Develop an AI-ready Business Analyst prototype
+* Develop an AI ready Business Analyst prototype
 
 ---
 
 ## Dataset
 
-The analysis uses the Olist Brazilian E-Commerce dataset.
+The analysis uses the Olist Brazilian Ecommerce dataset.
 
 Main datasets used:
 
@@ -36,7 +36,7 @@ Main datasets used:
 * Customers
 * Reviews
 
-The datasets were cleaned, prepared, merged, and analyzed using Python.
+The datasets were cleaned, prepared, merged and analyzed using Python.
 
 ---
 
@@ -47,7 +47,7 @@ The datasets were cleaned, prepared, merged, and analyzed using Python.
 * NumPy
 * Matplotlib
 * SciPy
-* Scikit-learn
+* Scikit learn
 * Jupyter Notebook
 
 ---
@@ -65,7 +65,7 @@ Key preparation activities included:
 * Inspecting data types
 * Handling missing values
 * Converting date/time columns
-* Creating analysis-ready variables
+* Creating analysis ready variables
 * Combining relevant datasets for business analysis
 
 ---
@@ -89,12 +89,12 @@ Visualizations were created to understand the major patterns in the dataset.
 
 ## 3. Distribution Analysis
 
-Order-level product values were analyzed to understand the distribution of customer purchases.
+Order level product values were analyzed to understand the distribution of customer purchases.
 
 Key findings:
 
-* Most orders were relatively low-value.
-* The distribution was right-skewed.
+* Most orders were relatively low value.
+* The distribution was right skewed.
 * The median order value was lower than the mean.
 * A small number of orders had substantially higher values.
 
@@ -114,7 +114,7 @@ Results:
 * Outliers: 7,913
 * Outlier percentage: approximately 8.02%
 
-High-value orders were retained because they may represent genuine customer purchases rather than data errors.
+High value orders were retained because they may represent genuine customer purchases rather than data errors.
 
 ---
 
@@ -129,13 +129,13 @@ Segments:
 * High Value
 * Very High Value
 
-The analysis showed that most customers belonged to the lower-value segment, while a smaller group generated substantially higher purchase values.
+The analysis showed that most customers belonged to the lower value segment, while a smaller group generated substantially higher purchase values.
 
 An important dataset characteristic was identified:
 
 > Each customer has one order in the available Olist customer/order structure.
 
-Therefore, traditional repeat-customer analysis is limited in this dataset.
+Therefore, traditional repeat customer analysis is limited in this dataset.
 
 ---
 
@@ -156,7 +156,7 @@ RFM segments were created to identify:
 
 * Low-value / less recent customers
 * Medium customers
-* Higher-value / more recent customers
+* Higher value / more recent customers
 
 This analysis was also incorporated into the Power BI dashboard.
 
@@ -197,7 +197,7 @@ The analysis used 96,359 observations.
 Results:
 
 * Pearson correlation: approximately **-0.334**
-* p-value: effectively 0 at the available numerical precision
+* p value: effectively 0 at the available numerical precision
 
 This provides statistical evidence of an association between delivery time and review score.
 
@@ -233,7 +233,7 @@ Performance:
 * Recall: 11.98%
 * F1 Score: 20.48%
 
-The baseline model had relatively high accuracy but detected only a small proportion of actual low-review cases.
+The baseline model had relatively high accuracy but detected only a small proportion of actual low review cases.
 
 ### Balanced Model
 
@@ -246,7 +246,7 @@ Performance:
 * Recall: 53.77%
 * F1 Score: 33.50%
 
-The balanced model substantially improved recall for low-review orders, although precision remained limited.
+The balanced model substantially improved recall for low review orders, although precision remained limited.
 
 This demonstrates the importance of evaluating multiple classification metrics rather than relying only on accuracy.
 
@@ -258,7 +258,7 @@ A separate notebook was created:
 
 `Olist_Ecommerce_AI_Business_Analyst.ipynb`
 
-The goal was to create an AI-ready Business Analyst workflow that combines analytical evidence with natural-language business questions.
+The goal was to create an AI ready Business Analyst workflow that combines analytical evidence with natural language business questions.
 
 Example business question:
 
@@ -270,7 +270,7 @@ The prototype combines evidence such as:
 * Number of late orders
 * Delivery/review correlation
 * Low-review order count
-* Predictive-model performance
+* Predictive model performance
 
 The workflow is designed to produce:
 
@@ -286,7 +286,7 @@ The current notebook is an **AI-ready prototype**, not a production LLM applicat
 
 The prototype uses structured analytical evidence and rule-based responses. An external LLM/API connection was not added.
 
-This avoids exposing API credentials inside a browser-based Jupyter environment.
+This avoids exposing API credentials inside a browser based Jupyter environment.
 
 ---
 
@@ -297,20 +297,20 @@ The analysis identified several important business patterns:
 * Delivery performance is associated with customer satisfaction.
 * Longer delivery times are associated with lower review scores.
 * A meaningful number of orders were delivered late.
-* Customer purchase values are highly right-skewed.
-* A relatively small group of high-value customers contributes substantially more purchase value.
-* The dataset contains one order per customer in the available customer/order structure, limiting repeat-customer analysis.
-* Predicting low reviews is challenging because low-review cases are a minority class.
-* Class balancing improves recall but creates a trade-off with precision.
+* Customer purchase values are highly right skewed.
+* A relatively small group of high value customers contributes substantially more purchase value.
+* The dataset contains one order per customer in the available customer/order structure, limiting repeat customer analysis.
+* Predicting low reviews is challenging because low review cases are a minority class.
+* Class balancing improves recall but creates a trade off with precision.
 
 ---
 
 # Project Limitations
 
 * Customer frequency is effectively 1 in the available dataset structure.
-* Therefore, repeat-customer analysis is limited.
+* Therefore, repeat customer analysis is limited.
 * Correlation does not establish causation.
-* The predictive model is a baseline model and is not production-ready.
+* The predictive model is a baseline model and is not production ready.
 * The predictive model uses a limited set of features.
 * The SQL review table used in the SQL phase contained fewer review records than the full review dataset used in Python.
 * RFM scoring methods may differ between Python and Power BI because the Power BI dashboard uses fixed business thresholds.
@@ -371,15 +371,15 @@ Olist-Ecommerce-Analytics/
 * Delivery performance analysis
 * Customer satisfaction analysis
 * Business problem framing
-* Data-driven recommendations
+* Data driven recommendations
 * Analytical limitations and uncertainty
 
 ---
 
 # Outcome
 
-This Python phase progressed from basic data analysis to advanced analytics and an AI-ready Business Analyst prototype.
+This Python phase progressed from basic data analysis to advanced analytics and an AI ready Business Analyst prototype.
 
-The resulting analysis provides a foundation for the final Olist E-Commerce Business Intelligence portfolio project combining:
+The resulting analysis provides a foundation for the final Olist Ecommerce Business Intelligence portfolio project combining:
 
 **Excel → SQL → Python → Power BI → AI/GenAI**
